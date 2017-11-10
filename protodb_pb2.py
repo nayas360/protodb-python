@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protodb.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rprotodb.proto\"Q\n\x07ProtoDB\x12\x1e\n\x06header\x18\x01 \x01(\x0b\x32\x0e.ProtoDBHeader\x12&\n\x0b\x64irectories\x18\x02 \x03(\x0b\x32\x11.ProtoDBDirectory\"1\n\rProtoDBHeader\x12\r\n\x05magic\x18\x01 \x01(\x0c\x12\x11\n\tdbversion\x18\x02 \x01(\x0c\"4\n\x17ProtoDBDocumentMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"Y\n\x0fProtoDBDocument\x12*\n\x08metadata\x18\x01 \x01(\x0b\x32\x18.ProtoDBDocumentMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"5\n\x18ProtoDBDirectoryMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"\x9a\x01\n\x10ProtoDBDirectory\x12+\n\x08metadata\x18\x01 \x01(\x0b\x32\x19.ProtoDBDirectoryMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\'\n\x0csubdirectory\x18\x03 \x03(\x0b\x32\x11.ProtoDBDirectory\x12\"\n\x08\x64ocument\x18\x04 \x03(\x0b\x32\x10.ProtoDBDocumentb\x06proto3')
+  serialized_pb=_b('\n\rprotodb.proto\"O\n\x07ProtoDB\x12\x1e\n\x06header\x18\x01 \x01(\x0b\x32\x0e.ProtoDBHeader\x12$\n\tdirectory\x18\x02 \x03(\x0b\x32\x11.ProtoDBDirectory\"1\n\rProtoDBHeader\x12\r\n\x05magic\x18\x01 \x01(\x0c\x12\x11\n\tdbversion\x18\x02 \x01(\x0c\"4\n\x17ProtoDBDocumentMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"Y\n\x0fProtoDBDocument\x12*\n\x08metadata\x18\x01 \x01(\x0b\x32\x18.ProtoDBDocumentMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"5\n\x18ProtoDBDirectoryMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"\x97\x01\n\x10ProtoDBDirectory\x12+\n\x08metadata\x18\x01 \x01(\x0b\x32\x19.ProtoDBDirectoryMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\tdirectory\x18\x03 \x03(\x0b\x32\x11.ProtoDBDirectory\x12\"\n\x08\x64ocument\x18\x04 \x03(\x0b\x32\x10.ProtoDBDocumentb\x06proto3')
 )
 
 
@@ -40,7 +40,7 @@ _PROTODB = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='directories', full_name='ProtoDB.directories', index=1,
+      name='directory', full_name='ProtoDB.directory', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -59,7 +59,7 @@ _PROTODB = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=98,
+  serialized_end=96,
 )
 
 
@@ -96,8 +96,8 @@ _PROTODBHEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=100,
-  serialized_end=149,
+  serialized_start=98,
+  serialized_end=147,
 )
 
 
@@ -127,8 +127,8 @@ _PROTODBDOCUMENTMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=203,
+  serialized_start=149,
+  serialized_end=201,
 )
 
 
@@ -172,8 +172,8 @@ _PROTODBDOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=205,
-  serialized_end=294,
+  serialized_start=203,
+  serialized_end=292,
 )
 
 
@@ -203,8 +203,8 @@ _PROTODBDIRECTORYMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=296,
-  serialized_end=349,
+  serialized_start=294,
+  serialized_end=347,
 )
 
 
@@ -230,7 +230,7 @@ _PROTODBDIRECTORY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subdirectory', full_name='ProtoDBDirectory.subdirectory', index=2,
+      name='directory', full_name='ProtoDBDirectory.directory', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -255,15 +255,15 @@ _PROTODBDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=506,
+  serialized_start=350,
+  serialized_end=501,
 )
 
 _PROTODB.fields_by_name['header'].message_type = _PROTODBHEADER
-_PROTODB.fields_by_name['directories'].message_type = _PROTODBDIRECTORY
+_PROTODB.fields_by_name['directory'].message_type = _PROTODBDIRECTORY
 _PROTODBDOCUMENT.fields_by_name['metadata'].message_type = _PROTODBDOCUMENTMETADATA
 _PROTODBDIRECTORY.fields_by_name['metadata'].message_type = _PROTODBDIRECTORYMETADATA
-_PROTODBDIRECTORY.fields_by_name['subdirectory'].message_type = _PROTODBDIRECTORY
+_PROTODBDIRECTORY.fields_by_name['directory'].message_type = _PROTODBDIRECTORY
 _PROTODBDIRECTORY.fields_by_name['document'].message_type = _PROTODBDOCUMENT
 DESCRIPTOR.message_types_by_name['ProtoDB'] = _PROTODB
 DESCRIPTOR.message_types_by_name['ProtoDBHeader'] = _PROTODBHEADER
