@@ -1,0 +1,3 @@
+[submodule "protodb_api"]
+	path = protodb_api
+	url = https://github.com/nayas360/protodb-api
