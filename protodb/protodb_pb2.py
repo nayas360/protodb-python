@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protodb.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rprotodb.proto\"O\n\x07ProtoDB\x12\x1e\n\x06header\x18\x01 \x01(\x0b\x32\x0e.ProtoDBHeader\x12$\n\tdirectory\x18\x02 \x03(\x0b\x32\x11.ProtoDBDirectory\"1\n\rProtoDBHeader\x12\r\n\x05magic\x18\x01 \x01(\x0c\x12\x11\n\tdbversion\x18\x02 \x01(\x0c\"4\n\x17ProtoDBDocumentMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"Y\n\x0fProtoDBDocument\x12*\n\x08metadata\x18\x01 \x01(\x0b\x32\x18.ProtoDBDocumentMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"5\n\x18ProtoDBDirectoryMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"\x97\x01\n\x10ProtoDBDirectory\x12+\n\x08metadata\x18\x01 \x01(\x0b\x32\x19.ProtoDBDirectoryMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\tdirectory\x18\x03 \x03(\x0b\x32\x11.ProtoDBDirectory\x12\"\n\x08\x64ocument\x18\x04 \x03(\x0b\x32\x10.ProtoDBDocumentb\x06proto3')
+  serialized_pb=_b('\n\rprotodb.proto\"O\n\x07ProtoDB\x12\x1e\n\x06header\x18\x01 \x01(\x0b\x32\x0e.ProtoDBHeader\x12$\n\tdirectory\x18\x02 \x01(\x0b\x32\x11.ProtoDBDirectory\"1\n\rProtoDBHeader\x12\r\n\x05magic\x18\x01 \x01(\x0c\x12\x11\n\tdbversion\x18\x02 \x01(\x0c\"4\n\x17ProtoDBDocumentMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"Y\n\x0fProtoDBDocument\x12*\n\x08metadata\x18\x01 \x01(\x0b\x32\x18.ProtoDBDocumentMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"5\n\x18ProtoDBDirectoryMetadata\x12\x19\n\x11\x63reationTimestamp\x18\x01 \x01(\x03\"\x97\x01\n\x10ProtoDBDirectory\x12+\n\x08metadata\x18\x01 \x01(\x0b\x32\x19.ProtoDBDirectoryMetadata\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\tdirectory\x18\x03 \x03(\x0b\x32\x11.ProtoDBDirectory\x12\"\n\x08\x64ocument\x18\x04 \x03(\x0b\x32\x10.ProtoDBDocumentb\x06proto3')
 )
 
 
@@ -38,14 +38,14 @@ _PROTODB = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='directory', full_name='ProtoDB.directory', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -76,14 +76,14 @@ _PROTODBHEADER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='dbversion', full_name='ProtoDBHeader.dbversion', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -114,7 +114,7 @@ _PROTODBDOCUMENTMETADATA = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -145,21 +145,21 @@ _PROTODBDOCUMENT = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='ProtoDBDocument.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='ProtoDBDocument.data', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -190,7 +190,7 @@ _PROTODBDIRECTORYMETADATA = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -221,28 +221,28 @@ _PROTODBDIRECTORY = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='ProtoDBDirectory.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='directory', full_name='ProtoDBDirectory.directory', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='document', full_name='ProtoDBDirectory.document', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
